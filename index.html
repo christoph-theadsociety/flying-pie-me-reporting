@@ -492,8 +492,10 @@
   var minSelectableMonday = new Date(maxSelectableMonday);
   minSelectableMonday.setUTCDate(minSelectableMonday.getUTCDate() - 52 * 7);
 
-  var latestKnownWeek = INITIAL_DATA.weeks.length ? INITIAL_DATA.weeks[INITIAL_DATA.weeks.length - 1] : null;
-  var selectedMonday = latestKnownWeek ? new Date(latestKnownWeek.date_start + "T00:00:00Z") : new Date(maxSelectableMonday);
+  // Always anchored to today, not to whatever happens to be embedded/fetched —
+  // so a static, never-rebuilt copy of this page still shows the true current period.
+  var selectedMonday = new Date(maxSelectableMonday);
+  selectedMonday.setUTCDate(selectedMonday.getUTCDate() - WEEKS_WINDOW * 7);
 
   function formatBtnLabel(monday){
     var iso = isoWeekOfDate(monday);
@@ -605,12 +607,8 @@
   var maxSelectableMonth = { year: todayUtc.getUTCFullYear(), month: todayUtc.getUTCMonth() };
   var minSelectableMonth = addMonths(maxSelectableMonth.year, maxSelectableMonth.month, -24);
 
-  var latestKnownMonth = INITIAL_MONTHLY_DATA.months.length
-    ? INITIAL_MONTHLY_DATA.months.slice().sort(byDateStart)[INITIAL_MONTHLY_DATA.months.length - 1]
-    : null;
-  var selectedMonthStart = latestKnownMonth
-    ? addMonths(latestKnownMonth.year, latestKnownMonth.month_num - 1, -(MONTHS_WINDOW - 1))
-    : addMonths(maxSelectableMonth.year, maxSelectableMonth.month, -(MONTHS_WINDOW - 1));
+  // Same reasoning as selectedMonday above: anchor to today, not embedded data.
+  var selectedMonthStart = addMonths(maxSelectableMonth.year, maxSelectableMonth.month, -MONTHS_WINDOW);
 
   // ascending list of every selectable month, oldest first
   var monthStarts = [];
