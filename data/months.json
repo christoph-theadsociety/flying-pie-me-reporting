@@ -186,16 +186,16 @@
     "date_start": "2026-07-01",
     "date_stop": "2026-07-31",
     "spend": 3635.85,
+    "link_clicks": 5755,
+    "cpc": 0.632,
+    "ctr": 1.236,
+    "impressions": 465462,
+    "cpm": 7.81,
     "revenue": 11161.48,
     "roas": 3.07,
     "purchases": 173,
     "cost_per_purchase": 21.02,
-    "link_clicks": 5755,
-    "cpc": 0.632,
-    "ctr": 1.236,
-    "conversion_rate": 3.006,
-    "impressions": 465462,
-    "cpm": 7.81
+    "conversion_rate": 3.006
   },
   {
     "month": "2026-08",
@@ -204,15 +204,15 @@
     "date_start": "2026-08-01",
     "date_stop": "2026-08-31",
     "spend": 5241.75,
+    "link_clicks": 7913,
+    "cpc": 0.662,
+    "ctr": 1.126,
+    "impressions": 702804,
+    "cpm": 7.46,
     "revenue": 18929.71,
     "roas": 3.611,
     "purchases": 305,
     "cost_per_purchase": 17.19,
-    "link_clicks": 7913,
-    "cpc": 0.662,
-    "ctr": 1.126,
-    "conversion_rate": 3.854,
-    "impressions": 702804,
-    "cpm": 7.46
+    "conversion_rate": 3.854
   }
 ]
