@@ -922,16 +922,33 @@
     "iso_year": 2026,
     "date_start": "2026-09-21",
     "date_stop": "2026-09-27",
-    "spend": 1454.84,
-    "link_clicks": 3339,
+    "spend": 1454.92,
+    "link_clicks": 3340,
     "cpc": 0.436,
-    "ctr": 1.638,
-    "impressions": 203824,
+    "ctr": 1.639,
+    "impressions": 203839,
     "cpm": 7.14,
     "revenue": 2853.07,
     "roas": 1.961,
     "purchases": 48,
     "cost_per_purchase": 30.31,
-    "conversion_rate": 1.438
+    "conversion_rate": 1.437
+  },
+  {
+    "week": "KW40",
+    "iso_year": 2026,
+    "date_start": "2026-09-28",
+    "date_stop": "2026-10-04",
+    "spend": 1218.52,
+    "link_clicks": 2978,
+    "cpc": 0.409,
+    "ctr": 1.724,
+    "impressions": 172708,
+    "cpm": 7.06,
+    "revenue": 3000.17,
+    "roas": 2.462,
+    "purchases": 46,
+    "cost_per_purchase": 26.49,
+    "conversion_rate": 1.545
   }
 ]
